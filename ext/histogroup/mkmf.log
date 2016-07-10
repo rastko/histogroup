@@ -1,0 +1,146 @@
+find_header: checking for ruby.h... -------------------- yes
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined     -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"x86_64-pc-linux-gnu-gcc -E -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+/* end */
+
+--------------------
+
+find_library: checking for png_sig_cmp() in -lpng... -------------------- yes
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined     -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19 -lpng  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘png_sig_cmp’ undeclared (first use in this function)
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))png_sig_cmp; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined     -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19 -lpng  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { png_sig_cmp(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+find_library: checking for jpeg_set_defaults() in -ljpeg... -------------------- yes
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined    -lpng  -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19 -ljpeg -lpng  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘jpeg_set_defaults’ undeclared (first use in this function)
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))jpeg_set_defaults; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined    -lpng  -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19 -ljpeg -lpng  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { jpeg_set_defaults(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+find_library: checking for TIFFSetDirectory() in -ltiff... -------------------- yes
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined    -ljpeg -lpng  -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19 -ltiff -ljpeg -lpng  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:4:53: error: ‘TIFFSetDirectory’ undeclared (first use in this function)
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))TIFFSetDirectory; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"x86_64-pc-linux-gnu-gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/data/stipple/shared/bundled_gems/ruby/1.9.1/gems/histogroup-3.0.1/extern -I/opt/local/include -I/usr/X11/include -I/usr/include -I/usr/include -I/usr/local/include    -march=athlon64 -O2 -pipe -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib64 -Wl,-R/usr/lib64 -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/X11/lib -Wl,-R/usr/X11/lib -L/usr/lib64 -Wl,-R/usr/lib64 -L/usr/lib -Wl,-R/usr/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L. -Wl,-O1 -Wl,--as-needed -Wl,--hash-style=gnu -rdynamic -Wl,-export-dynamic -Wl,--no-undefined    -ljpeg -lpng  -Wl,-R -Wl,/usr/lib64 -L/usr/lib64 -lruby19 -ltiff -ljpeg -lpng  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { TIFFSetDirectory(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
